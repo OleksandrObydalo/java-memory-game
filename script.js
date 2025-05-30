@@ -15,35 +15,35 @@ class JavaMemoryGame {
         
         this.javaQuestions = [
             {
-                question: "Что выведет\nSystem.out.println(\"Hello\");",
+                question: "Що виведе\nSystem.out.println(\"Hello\");",
                 answer: "Hello"
             },
             {
-                question: "Какой тип данных\nдля целых чисел?",
+                question: "Який тип даних\nдля цілих чисел?",
                 answer: "int"
             },
             {
-                question: "Ключевое слово для\nсоздания класса?",
+                question: "Ключове слово для\nстворення класу?",
                 answer: "class"
             },
             {
-                question: "Метод для получения\nдлины строки?",
+                question: "Метод для отримання\nдовжини рядка?",
                 answer: ".length()"
             },
             {
-                question: "Ключевое слово для\nнаследования?",
+                question: "Ключове слово для\nуспадкування?",
                 answer: "extends"
             },
             {
-                question: "Что означает JVM?",
+                question: "Що означає JVM?",
                 answer: "Java Virtual Machine"
             },
             {
-                question: "Метод входа в\nJava программу?",
+                question: "Метод входу в\nJava програму?",
                 answer: "main()"
             },
             {
-                question: "Ключевое слово для\nконстант?",
+                question: "Ключове слово для\nконстант?",
                 answer: "final"
             }
         ];
@@ -375,8 +375,8 @@ class JavaMemoryGame {
         const cardPairs = document.getElementById('cardPairs');
         cardPairs.innerHTML = `
             <div class="card-pair">
-                <input type="text" placeholder="Вопрос" class="question-input">
-                <input type="text" placeholder="Ответ" class="answer-input">
+                <input type="text" placeholder="Питання" class="question-input">
+                <input type="text" placeholder="Відповідь" class="answer-input">
                 <button type="button" class="remove-pair">×</button>
             </div>
         `;
@@ -388,8 +388,8 @@ class JavaMemoryGame {
         const newPair = document.createElement('div');
         newPair.className = 'card-pair';
         newPair.innerHTML = `
-            <input type="text" placeholder="Вопрос" class="question-input">
-            <input type="text" placeholder="Ответ" class="answer-input">
+            <input type="text" placeholder="Питання" class="question-input">
+            <input type="text" placeholder="Відповідь" class="answer-input">
             <button type="button" class="remove-pair">×</button>
         `;
         cardPairs.appendChild(newPair);
@@ -425,8 +425,8 @@ class JavaMemoryGame {
                     const pairDiv = document.createElement('div');
                     pairDiv.className = 'card-pair';
                     pairDiv.innerHTML = `
-                        <input type="text" placeholder="Вопрос" class="question-input" value="${this.escapeHtml(question)}">
-                        <input type="text" placeholder="Ответ" class="answer-input" value="${this.escapeHtml(answer)}">
+                        <input type="text" placeholder="Питання" class="question-input" value="${this.escapeHtml(question)}">
+                        <input type="text" placeholder="Відповідь" class="answer-input" value="${this.escapeHtml(answer)}">
                         <button type="button" class="remove-pair">×</button>
                     `;
                     cardPairs.appendChild(pairDiv);
@@ -448,7 +448,7 @@ class JavaMemoryGame {
     startCustomGame() {
         const pairs = this.collectCardPairs();
         if (pairs.length < 2) {
-            alert('Добавьте минимум 2 пары карточек для игры!');
+            alert('Додайте мінімум 2 пари карток для гри!');
             return;
         }
         

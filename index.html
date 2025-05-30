@@ -30,53 +30,53 @@
         </div>
         
         <div class="game-controls">
-            <button id="newGameBtn" class="btn btn-primary">Новая игра</button>
-            <button id="hintBtn" class="btn btn-secondary">💡 Подсказка</button>
-            <button id="customGameBtn" class="btn btn-accent">🎨 Создать свою игру</button>
+            <button id="newGameBtn" class="btn btn-primary">Нова гра</button>
+            <button id="hintBtn" class="btn btn-secondary">💡 Підказка</button>
+            <button id="customGameBtn" class="btn btn-accent">🎨 Створити свою гру</button>
         </div>
         
         <div class="modal" id="victoryModal">
             <div class="modal-content">
-                <h2>🎉 Поздравляем!</h2>
-                <p>Вы прошли игру!</p>
+                <h2>🎉 Вітаємо!</h2>
+                <p>Ви пройшли гру!</p>
                 <div class="final-stats">
-                    <p>Время: <span id="finalTime"></span></p>
-                    <p>Ходы: <span id="finalMoves"></span></p>
+                    <p>Час: <span id="finalTime"></span></p>
+                    <p>Ходи: <span id="finalMoves"></span></p>
                     <p>Очки: <span id="finalScore"></span></p>
                 </div>
-                <button id="playAgainBtn" class="btn btn-primary">Играть снова</button>
+                <button id="playAgainBtn" class="btn btn-primary">Грати знову</button>
             </div>
         </div>
         
         <div class="modal" id="customGameModal">
             <div class="modal-content custom-modal">
-                <h2>🎨 Создать свою игру</h2>
+                <h2>🎨 Створити свою гру</h2>
                 <div class="custom-game-form">
                     <div class="upload-section">
                         <label for="fileUpload" class="file-upload-btn">
-                            📁 Загрузить файл CSV
+                            📁 Завантажити файл CSV
                         </label>
                         <input type="file" id="fileUpload" accept=".csv,.txt" style="display: none;">
-                        <p class="upload-help">Формат: вопрос,ответ (по одной паре на строку)<br>или ANKI формат: вопрос;ответ</p>
+                        <p class="upload-help">Формат: питання,відповідь (по одній парі на рядок)<br>або ANKI формат: питання;відповідь</p>
                     </div>
                     
-                    <div class="divider">или</div>
+                    <div class="divider">або</div>
                     
                     <div class="manual-input">
-                        <h3>Добавить пары вручную:</h3>
+                        <h3>Додати пари вручну:</h3>
                         <div id="cardPairs">
                             <div class="card-pair">
-                                <input type="text" placeholder="Вопрос" class="question-input">
-                                <input type="text" placeholder="Ответ" class="answer-input">
+                                <input type="text" placeholder="Питання" class="question-input">
+                                <input type="text" placeholder="Відповідь" class="answer-input">
                                 <button type="button" class="remove-pair">×</button>
                             </div>
                         </div>
-                        <button id="addPairBtn" class="btn btn-small">+ Добавить пару</button>
+                        <button id="addPairBtn" class="btn btn-small">+ Додати пару</button>
                     </div>
                     
                     <div class="modal-actions">
-                        <button id="startCustomGameBtn" class="btn btn-primary">Начать игру</button>
-                        <button id="cancelCustomBtn" class="btn btn-secondary">Отмена</button>
+                        <button id="startCustomGameBtn" class="btn btn-primary">Почати гру</button>
+                        <button id="cancelCustomBtn" class="btn btn-secondary">Скасувати</button>
                     </div>
                 </div>
             </div>
