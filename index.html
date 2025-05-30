@@ -1,0 +1,88 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Java Memory Game</h1>
+            <div class="game-stats">
+                <div class="timer">
+                    <span>⏱️</span>
+                    <span id="timer">0:00</span>
+                </div>
+                <div class="moves">
+                    <span>🔄</span>
+                    <span id="moves">0</span>
+                </div>
+                <div class="score">
+                    <span>⭐</span>
+                    <span id="score">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="game-board" id="gameBoard">
+            <!-- Карточки будут генерироваться JavaScript -->
+        </div>
+        
+        <div class="game-controls">
+            <button id="newGameBtn" class="btn btn-primary">Новая игра</button>
+            <button id="hintBtn" class="btn btn-secondary">💡 Подсказка</button>
+            <button id="customGameBtn" class="btn btn-accent">🎨 Создать свою игру</button>
+        </div>
+        
+        <div class="modal" id="victoryModal">
+            <div class="modal-content">
+                <h2>🎉 Поздравляем!</h2>
+                <p>Вы прошли игру!</p>
+                <div class="final-stats">
+                    <p>Время: <span id="finalTime"></span></p>
+                    <p>Ходы: <span id="finalMoves"></span></p>
+                    <p>Очки: <span id="finalScore"></span></p>
+                </div>
+                <button id="playAgainBtn" class="btn btn-primary">Играть снова</button>
+            </div>
+        </div>
+        
+        <div class="modal" id="customGameModal">
+            <div class="modal-content custom-modal">
+                <h2>🎨 Создать свою игру</h2>
+                <div class="custom-game-form">
+                    <div class="upload-section">
+                        <label for="fileUpload" class="file-upload-btn">
+                            📁 Загрузить файл CSV
+                        </label>
+                        <input type="file" id="fileUpload" accept=".csv,.txt" style="display: none;">
+                        <p class="upload-help">Формат: вопрос,ответ (по одной паре на строку)<br>или ANKI формат: вопрос;ответ</p>
+                    </div>
+                    
+                    <div class="divider">или</div>
+                    
+                    <div class="manual-input">
+                        <h3>Добавить пары вручную:</h3>
+                        <div id="cardPairs">
+                            <div class="card-pair">
+                                <input type="text" placeholder="Вопрос" class="question-input">
+                                <input type="text" placeholder="Ответ" class="answer-input">
+                                <button type="button" class="remove-pair">×</button>
+                            </div>
+                        </div>
+                        <button id="addPairBtn" class="btn btn-small">+ Добавить пару</button>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button id="startCustomGameBtn" class="btn btn-primary">Начать игру</button>
+                        <button id="cancelCustomBtn" class="btn btn-secondary">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
